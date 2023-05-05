@@ -115,6 +115,21 @@
     .bd-links-nav {
         font-size: .875rem;
     }
+    .bd-layout{
+        padding: 1rem !important;
+    }
+    .info-perfil{
+        padding: 0 !important;
+    }
+    .bd-main__section{
+        border: 0 !important;
+    }
+    .mb-sm-3{
+        margin-bottom: 1rem !important;
+    }
+    .bd-main__img{
+        width: 100px;
+    }
     
 }
 .bd-links-link{
@@ -137,6 +152,8 @@
 }
 @media (max-width: 576px) {
     .f-custom .dropdown-item{
-        white-space: normal;
+       white-space: normal;
     }
+    
+    
 }
