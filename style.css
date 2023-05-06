@@ -128,7 +128,10 @@
         margin-bottom: 1rem !important;
     }
     .bd-main__img{
-        width: 100px;
+        width: 96px;
+    }
+    .pt-sm-0{
+        *padding-top: 0 !important;
     }
     
 }
