@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Fpagos demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -681,40 +681,82 @@
                 <img class="img-fluid rounded-circle bd-main__img" width="160" src="user.png" alt="">
                 <div class="mt-3 mb-sm-3">
                   <label class="btn btn-outline-secondary px-4 rounded" for="fotoPerfil">Editar</label>
-                  <input type="file" class="d-none" id="fotoPerfil">
+                  <input type="file" class="d-none" id="fotoPerfil" disabled>
                 </div>
               </div>
             </div>
             <div class="col-lg-9">
-              <form action="">
+              <form class="needs-validation" novalidate action="">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Nombre de usuario</label>
-                  <div class="input-group">
+                  <div class="input-group has-validation">
                     <input type="text" class="form-control" aria-label="Editar nombre de usuario"
-                      placeholder="Super tienda usuario" disabled readonly>
+                      placeholder="Super tienda usuario" disabled readonly required>
                     <button type="button" class="input-group-text">Editar</button>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
-                  <div class="input-group">
+                  <div class="input-group has-validation">
                     <input type="email" class="form-control" aria-label="Editar nombre de usuario"
-                      placeholder="name@example.com" disabled readonly>
+                      placeholder="name@example.com" disabled readonly required>
                     <button type="button" class="input-group-text">Editar</button>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Telefono de contacto</label>
-                  <div class="input-group">
+                  <div class="input-group has-validation">
                     <input type="text" class="form-control" aria-label="Editar nombre de usuario"
-                      placeholder="0424-5656565">
-                      <button type="button" class="input-group-text text-bg-success">Guardar</button>          
+                      placeholder="0424-5656565" required>
+                      <button type="submit" class="input-group-text text-bg-success">Guardar</button>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>          
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
+        <div class="p-lg-3 pb-3 px-3 mb-lg-4 mb-sm-3 fw-semibold border-bottom">Cambiar contraseña</div>
+        <div class="container pb-5">
+          <div class="row align-items-center px-5 info-perfil">
+            <div class="col-lg-3 d-sm-none d-lg-block"></div>
+            <div class="col-lg-9">
+              <form class="needs-validation" novalidate action="">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Nueva contraseña</label>
+                  <div class="input-group has-validation">
+                    <input type="password" class="form-control" aria-label="Editar nombre de usuario"
+                      placeholder="Ingresar nueva contraseña" required>
+                      <span class="input-group-text">Editar</span>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Confirmar nueva contraseña</label>
+                  <div class="input-group has-validation">
+                    <input type="password" class="form-control" aria-label="Editar nombre de usuario"
+                      placeholder="Confirme nueva contraseña" required>
+                      <button type="submit" class="input-group-text text-bg-success">Guardar</button>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
         <div class="p-3 text-center text-secondary">
           <small>Hola <span class="fw-semibold">Super tienda usuario</span>, te uniste a fpagos.com el 01 de abril de 2023</small>
         </div>
@@ -745,6 +787,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
 </body>
 
 </html>
