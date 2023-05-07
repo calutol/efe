@@ -676,7 +676,9 @@
         <div class="d-flex justify-content-between align-items-center p-lg-3 pb-3 px-3 mb-lg-4 mb-sm-3 fw-semibold border-bottom">
           <div class="">Tus notificaciones</div>
           <div>
-            <button type="button" class="btn p-0">Marcar todas como leídas</button>
+            <button type="button" class="btn p-0">
+              <small>Marcar como leídas</small>
+            </button>
           </div>
         </div>
         <div class="container pb-5">
@@ -863,50 +865,6 @@
         </div>
       </div>
     </main>
-  </div>
-
-
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Validación</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="my-3">
-            <form class="needs-validation" novalidate action="">
-              <label for="inputPassword5" class="form-label">Contraseña actual</label>
-              <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock"  placeholder="Ingrese contraseña" required>
-              <div class="invalid-feedback">
-                Contraseña incorrecta.
-              </div>
-              <div class="">
-                <p id="passwordHelpBlock" class="form-text lh-sm fst-italic">
-                  *Por favor ingrese su contraseña actual para poder guardar los cambios.
-                </p>
-              </div>
-              <div class="d-grid mt-4">
-                <button type="submit" class="btn btn-success">Aceptar</button>
-              </div>
-            </form>
-            <!--Caja de confirmacion-->
-            <div class="">
-              <div class="mb-3 ">
-                <svg class="checkmark success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle_success" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" stroke-linecap="round"/></svg>
-                <p class="fs-5 text-center text-success">Contraseña actualizada</p>
-              </div>
-              <div class="mb-3">
-                <svg class="checkmark error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle_error" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_check" stroke-linecap="round" fill="none" d="M16 16 36 36 M36 16 16 36
-                  "/></svg>
-                <p class="fs-5 text-center text-danger">Contraseña incorrecta</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
