@@ -933,7 +933,7 @@
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontraron resultados en su búsqueda",
                 "searchPlaceholder": "Buscar registros",
-                "info": "Página _START_ de _END_ de un total de _TOTAL_ registros",
+                "info": "Página _START_ de _END_ ... _TOTAL_ registros",
                 "infoEmpty": "No existen registros",
                 "infoFiltered": "(filtrado de un total de _MAX_ registros)",
                 "search": '<i class="bi bi-search me-2"></i>',
@@ -966,8 +966,10 @@
                   text: '<i class="bi bi-printer"></i>',
                   titleAttr: 'Imprimir',
                   className: 'btn btn-info'
+                },
+                {
+                  extend: 'pageLength',
                 }, 
-                'pageLength',      
               ]
             }
           );
